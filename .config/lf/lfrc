@@ -1,0 +1,67 @@
+set info size 
+set relativenumber on
+set scrolloff 5
+#set drawbox
+
+set shell zsh
+set shellopts '-euy'
+set ifs "\n"
+set filesep "\n"  # default already
+set icons on
+
+cmd open ${{
+	rifle -p 0 $f 
+}}
+
+
+# 切换是否显示隐藏文件
+map . set hidden!
+
+# 光标移动
+map u up
+map e down
+map n updir 
+map i open
+map U push 5u
+map E push 5e
+map gg top
+map G bottom 
+
+# 多选
+
+# 对文件/文件夹进行移动操作
+map x cut
+map d delete
+map a push %mkdir<space>
+map A push $nvim<space>
+#map y copy
+#map p paste
+#map r rename
+
+
+# 查找
+# map / search
+# map ? search-back
+map - search-prev 
+map = search-next
+
+# 书签
+# map m mark-save
+# map ' mark-load
+# map " mark-remove   需要shift
+
+# cmd模式
+#map <C-a> cmd-home 
+#map <C-e> cmd-end 
+map <C-up> cmd-history-prev
+map <C-down> cmd-history-next
+
+
+# 打开lazygit
+map <c-g> push $lazygit<enter>
+
+# 选择
+map s toggle
+# map v invert
+
+
