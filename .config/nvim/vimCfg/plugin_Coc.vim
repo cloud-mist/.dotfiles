@@ -7,6 +7,15 @@ let g:coc_global_extensions = [
 	\ 'coc-html',
 	\ 'coc-json',
 	\ 'coc-vimtex',
+	\ 'coc-emoji',
+	\ 'coc-toml',
+	\ 'coc-sh',
+	\ 'coc-pyright',
+	\ 'coc-lua',
+	\ 'coc-rust-analyzer',
+	\ 'coc-go',
+	\ 'coc-clangd',
+	\ 'coc-explorer',
 	\ 'coc-vimlsp',
 	\ 'coc-snippets',
 	\ 'coc-translator',
@@ -157,8 +166,6 @@ nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
 "nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 "nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
-
-
 
 
 " coc-snippets SET
