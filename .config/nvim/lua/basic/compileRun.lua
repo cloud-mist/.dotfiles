@@ -1,5 +1,6 @@
 ---   Compile & Run  ---
-vim.cmd([[
+vim.cmd(
+    [[
 map <F5> :call CompileRunGcc()<CR>
 func! CompileRunGcc()
 		exec "w"
@@ -63,4 +64,8 @@ func! CompileRunGcc()
 				:term racket %
 		endif
 endfunc
-]])
+
+
+
+]]
+)

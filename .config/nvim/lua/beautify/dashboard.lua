@@ -1,6 +1,5 @@
 vim.cmd(
     [[
-" Dashboard
 let g:dashboard_default_executive ='fzf'
 let g:indentLine_fileTypeExclude = ['dashboard']
 let g:dashboard_disable_statusline = 1

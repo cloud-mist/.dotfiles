@@ -17,33 +17,34 @@ return require("packer").startup(
             use "glepnir/dashboard-nvim"
             use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
 
-            --
-            -- complete
-            --
+            -- ##############
+            -- ## Complete ##
+            -- ##############
+
+            -- LSP
             use "neovim/nvim-lspconfig"
             use "williamboman/nvim-lsp-installer"
+
             use "tami5/lspsaga.nvim"
             use "j-hui/fidget.nvim"
             use "ray-x/lsp_signature.nvim"
-            use "theniceboy/vim-snippets"
 
-            use {
-                "hrsh7th/nvim-cmp", -- 代码补全核心插件，下面都是增强补全的体验插件
-                requires = {
-                    {"onsails/lspkind-nvim"}, -- 为补全添加类似 vscode 的图标
-                    {"hrsh7th/vim-vsnip"}, -- vsnip 引擎，用于获得代码片段支持
-                    {"hrsh7th/cmp-vsnip"}, -- 适用于 vsnip 的代码片段源
-                    {"hrsh7th/cmp-nvim-lsp"}, -- 替换内置 omnifunc，获得更多补全
-                    {"hrsh7th/cmp-path"}, -- 路径补全
-                    {"hrsh7th/cmp-buffer"}, -- 缓冲区补全
-                    {"hrsh7th/cmp-cmdline"}, -- 命令补全
-                    {"f3fora/cmp-spell"}, -- 拼写建议
-                    {"rafamadriz/friendly-snippets"}, -- 提供多种语言的代码片段
-                    {"lukas-reineke/cmp-under-comparator"} -- 让补全结果的排序更加智能
-                }
-            }
+            -- Cmp
+            use "hrsh7th/nvim-cmp"
 
-            --     use {'neoclide/coc.nvim', branch = 'release'}
+            use "hrsh7th/cmp-path"
+            use "hrsh7th/cmp-buffer"
+            use "hrsh7th/cmp-cmdline"
+
+            use "hrsh7th/cmp-nvim-lsp"
+            use "hrsh7th/cmp-nvim-lua"
+
+            use "onsails/lspkind-nvim"
+
+            -- Snip
+            use "L3MON4D3/LuaSnip"
+            use "saadparwaiz1/cmp_luasnip"
+            use "rafamadriz/friendly-snippets"
 
             -- language
             use "rust-lang/rust.vim"
@@ -56,7 +57,7 @@ return require("packer").startup(
             use "neovimhaskell/haskell-vim"
 
             -- tool
-            use "skywind3000/vim-terminal-help"
+            --            use "skywind3000/vim-terminal-help"
             use "jiangmiao/auto-pairs"
             use "tpope/vim-surround"
             use "gcmt/wildfire.vim"
@@ -80,7 +81,7 @@ return require("packer").startup(
             --		use 'dhruvasagar/vim-table-mode'
         end,
         config = {
-            max_jobs = 16,
+            max_jobs = 8,
             git = {
                 default_url_format = "https://github.com/%s"
             },

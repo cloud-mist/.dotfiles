@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/home/cloudmist/.local/share/nvim/site/pack/packer/start/FTerm.nvim",
     url = "https://github.com/numToStr/FTerm.nvim"
   },
+  LuaSnip = {
+    loaded = true,
+    path = "/home/cloudmist/.local/share/nvim/site/pack/packer/start/LuaSnip",
+    url = "https://github.com/L3MON4D3/LuaSnip"
+  },
   ["auto-pairs"] = {
     loaded = true,
     path = "/home/cloudmist/.local/share/nvim/site/pack/packer/start/auto-pairs",
@@ -99,25 +104,20 @@ _G.packer_plugins = {
     path = "/home/cloudmist/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
+  ["cmp-nvim-lua"] = {
+    loaded = true,
+    path = "/home/cloudmist/.local/share/nvim/site/pack/packer/start/cmp-nvim-lua",
+    url = "https://github.com/hrsh7th/cmp-nvim-lua"
+  },
   ["cmp-path"] = {
     loaded = true,
     path = "/home/cloudmist/.local/share/nvim/site/pack/packer/start/cmp-path",
     url = "https://github.com/hrsh7th/cmp-path"
   },
-  ["cmp-spell"] = {
+  cmp_luasnip = {
     loaded = true,
-    path = "/home/cloudmist/.local/share/nvim/site/pack/packer/start/cmp-spell",
-    url = "https://github.com/f3fora/cmp-spell"
-  },
-  ["cmp-under-comparator"] = {
-    loaded = true,
-    path = "/home/cloudmist/.local/share/nvim/site/pack/packer/start/cmp-under-comparator",
-    url = "https://github.com/lukas-reineke/cmp-under-comparator"
-  },
-  ["cmp-vsnip"] = {
-    loaded = true,
-    path = "/home/cloudmist/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
-    url = "https://github.com/hrsh7th/cmp-vsnip"
+    path = "/home/cloudmist/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
+    url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
   ["dashboard-nvim"] = {
     loaded = true,
@@ -249,11 +249,6 @@ _G.packer_plugins = {
     path = "/home/cloudmist/.local/share/nvim/site/pack/packer/start/vim-racket",
     url = "https://github.com/wlangstroth/vim-racket"
   },
-  ["vim-snippets"] = {
-    loaded = true,
-    path = "/home/cloudmist/.local/share/nvim/site/pack/packer/start/vim-snippets",
-    url = "https://github.com/theniceboy/vim-snippets"
-  },
   ["vim-surround"] = {
     loaded = true,
     path = "/home/cloudmist/.local/share/nvim/site/pack/packer/start/vim-surround",
@@ -263,11 +258,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/cloudmist/.local/share/nvim/site/pack/packer/start/vim-terminal-help",
     url = "https://github.com/skywind3000/vim-terminal-help"
-  },
-  ["vim-vsnip"] = {
-    loaded = true,
-    path = "/home/cloudmist/.local/share/nvim/site/pack/packer/start/vim-vsnip",
-    url = "https://github.com/hrsh7th/vim-vsnip"
   },
   vimtex = {
     loaded = true,

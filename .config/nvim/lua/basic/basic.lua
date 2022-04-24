@@ -2,9 +2,11 @@ local options = {
     tabstop = 4,
     softtabstop = 4,
     shiftwidth = 4,
+    --
     expandtab = true,
     autoindent = true,
     scrolloff = 8,
+    laststatus = 3, -- Only global statusline
     --
     number = true,
     relativenumber = true,
@@ -12,7 +14,7 @@ local options = {
     wrap = true,
     showcmd = true,
     wildmenu = true,
-    showmode = false,
+    showmode = true,
     hlsearch = true,
     ignorecase = true,
     smartcase = true,
@@ -31,12 +33,3 @@ local options = {
 for k, v in pairs(options) do
     vim.opt[k] = v
 end
-
-vim.cmd([[
-let &t_ut=''
-
-filetype on
-filetype indent on
-filetype plugin on
-filetype plugin indent on
-]])

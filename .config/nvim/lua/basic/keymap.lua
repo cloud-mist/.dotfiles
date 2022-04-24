@@ -2,7 +2,7 @@ local keymap = vim.api.nvim_set_keymap
 local opts = {noremap = true, silent = true}
 
 local function map(mode, shortcut, command)
-    vim.api.nvim_set_keymap(mode, shortcut, command, opts)
+    keymap(mode, shortcut, command, opts)
 end
 
 local function nmap(shortcut, command)
@@ -13,18 +13,11 @@ local function nnmap(shortcut, command)
     map("n", shortcut, command)
 end
 
-local function inmap(shortcut, command)
-    map("i", shortcut, command)
-end
-
 local function vnmap(shortcut, command)
     map("v", shortcut, command)
 end
 
--- ############################################################
 -- ######################### BASIC ############################
--- ############################################################
-
 -- mapleader
 keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
@@ -46,9 +39,7 @@ nmap("=", "n")
 nmap("<", "<<")
 nmap(">", ">>")
 
---- ############
---  ##  MOVE  ##
---- ############
+--  ==  MOVE ==
 --       ^
 --       u
 --   < n   i >
@@ -57,11 +48,9 @@ nmap(">", ">>")
 --
 
 nmap("n", "h")
-nmap("u", "k")
 nmap("e", "j")
+nmap("u", "k")
 nmap("i", "l")
-nmap("gu", "gk")
-nmap("ge", "gj")
 
 -- Insert
 nmap("k", "i")
@@ -81,9 +70,7 @@ nmap("R", ":source ~/.config/nvim/init.lua<CR>")
 nmap("S", ":w<CR>")
 nmap("Q", ":q<CR>")
 
---- ############
---- #  WINDOW  #
---- ############
+--                   ==  WINDOW  ==
 -- 分屏- 键位映射
 nmap("s", "<Nop>")
 nmap("si", ":set splitright<CR>:vsplit<CR>")
@@ -97,24 +84,23 @@ nmap("<LEADER>e", "<C-w>j")
 nmap("<LEADER>n", "<C-w>h")
 nmap("<LEADER>i", "<C-w>l")
 
-nmap("<LEADER>w", "<C-w>w") -- 移至下个窗口
-
 -- 窗口大小调整
-nmap("<up>", "res -5<CR>")
-nmap("<down>", "res +5<CR>")
-nmap("<left>", ":vertical resize+5<CR>")
-nmap("<right>", ":vertical resize-5<CR>")
+nmap("<up>", "<cmd>res -5<CR>")
+nmap("<down>", "<cmd>res +5<CR>")
+nmap("<left>", "<cmd>vertical resize+5<CR>")
+nmap("<right>", "<cmd>vertical resize-5<CR>")
 
 -- 横竖切换
 nmap("sh", "<C-w>t<C-w>K")
 nmap("sv", "<C-w>t<C-w>H")
 
 -- Tab management
-nmap("tu", ":tabe<CR>")
-nmap("tn", ":-tabnext<CR>")
-nmap("ti", ":+tabnext<CR>")
-nmap("tmn", ":-tabmove<CR>")
-nmap("tmi", ":+tabmove<CR>")
+nmap("tu", "<cmd>tabe<CR>")
+nmap("tn", "<cmd>-tabnext<CR>")
+nmap("ti", "<cmd>+tabnext<CR>")
+nmap("tmn", "<cmd>-tabmove<CR>")
+nmap("tmi", "<cmd>+tabmove<CR>")
 
--- terminal-mode
-map("t", "<Esc>", "<C-\\><C-n>")
+-- other map
+map("t", "<Esc>", "<C-\\><C-n>") -- terminal-mode
+nmap("<C-g>", ":tabe<CR>:term lazygit<CR>") -- lazygit

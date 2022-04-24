@@ -1,3 +1,19 @@
+" Coc-translator SET
+"" popup
+"nmap <Leader>t <Plug>(coc-translator-p)
+"vmap <Leader>t <Plug>(coc-translator-pv)
+"" replace
+"nmap <Leader>r <Plug>(coc-translator-r)
+"vmap <Leader>r <Plug>(coc-translator-rv)
+"
+"
+"" Coc-explorer SET
+"nnoremap  tt :CocCommand explorer<CR>
+
+
+
+
+
 "  ====================
 "  = coc-nvim插件配置 =
 "  ====================
@@ -63,7 +79,7 @@ else
   inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 endif
 
-" 上下看报错  key: 空格-   空格= 
+" 上下看报错  key: 空格-   空格=
 nmap <silent> <LEADER>- <Plug>(coc-diagnostic-prev)
 nmap <silent> <LEADER>= <Plug>(coc-diagnostic-next)
 

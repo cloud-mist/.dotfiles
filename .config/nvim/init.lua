@@ -13,13 +13,15 @@ require("plugins")
 --
 require("basic.basic")
 require("basic.keymap")
-require("basic.alg")
 require("basic.compileRun")
+require("basic.alg")
 --
-require("lsp.lspconfig")
-require("lsp.installer")
-require("lsp.lspsaga")
+require("cmp.nvim-cmp")
+require("cmp.luasnip")
+require("lsp.lsp-installer")
+require("lsp.lsp-config")
 require("lsp.fidget")
+require("lsp.lspsaga")
 require("lsp.lsp_signature")
 ---
 require("lsp.lang.mdpre")
@@ -27,7 +29,6 @@ require("lsp.lang.vimgo")
 require("lsp.lang.vimtex")
 require("lsp.lang.haskell")
 --
-require("cmp.nvim-cmp")
 --
 require("tools.fterm")
 require("tools.gitsign")
@@ -37,15 +38,7 @@ require("beautify.statusline")
 require("beautify.theme")
 require("beautify.dashboard")
 
--- ==================
--- === Add vimCfg ===
--- ==================
-
-vim.cmd([[
-"source ~/.config/nvim/vimCfg/plugin_Coc.vim
-]])
-
-vim.g.python_host_prog = "/usr/bin/python3"
+--
 vim.g.python3_host_prog = "/usr/bin/python3"
 vim.g.ruby_host_prog = "/usr/bin/ruby"
 
@@ -69,8 +62,6 @@ let g:LanguageClient_serverCommands = {
 "let g:indentLine_conceallevel = 2
 "
 
-" Lazygit
-noremap <c-g> :tabe<CR>:term lazygit<CR>
 
 " fcitx
 let s:fcitx_cmd = executable("fcitx5-remote") ? "fcitx5-remote" : "fcitx-remote"
@@ -84,6 +75,14 @@ augroup RestoreCursorShapeOnExit
 	"-blinkwait400-blinkoff400-blinkon400
 augroup END
 
+
+
+"Rainbow
+let g:rainbow_active = 1
+
+" Config File Highlight
+autocmd BufRead,BufNewFile config setf dosini
+
 " Fzf
 " [Buffers] Jump to the existing window if possible
 let g:fzf_buffers_jump = 1
@@ -96,28 +95,6 @@ let g:fzf_tags_command = 'ctags -R'
 
 " [Commands] --expect expression for directly executing the command
 let g:fzf_commands_expect = 'alt-enter,ctrl-x'
-
-
-"Rainbow
-let g:rainbow_active = 1
-
-" Config File Highlight
-autocmd BufRead,BufNewFile config,conf setf dosini
-
-" Coc-translator SET
-"" popup
-"nmap <Leader>t <Plug>(coc-translator-p)
-"vmap <Leader>t <Plug>(coc-translator-pv)
-"" replace
-"nmap <Leader>r <Plug>(coc-translator-r)
-"vmap <Leader>r <Plug>(coc-translator-rv)
-"
-"
-"" Coc-explorer SET
-"nnoremap  tt :CocCommand explorer<CR>
-
-" Config File Highlight
-autocmd BufRead,BufNewFile conf setf dosini
 
 ]]
 )
