@@ -17,6 +17,14 @@ local function vnmap(shortcut, command)
     map("v", shortcut, command)
 end
 
+local function ignore_snmap(shortcut, command)
+    keymap("n", shortcut, command, opts) -- normanl
+    keymap("x", shortcut, command, opts) -- visual
+    keymap("o", shortcut, command, opts) -- operator-pending
+    keymap("t", shortcut, command, opts) -- termianl
+    keymap("l", shortcut, command, opts) -- insert,command-line,lang-arg
+end
+
 -- ######################### BASIC ############################
 -- mapleader
 keymap("", "<Space>", "<Nop>", opts)
@@ -27,13 +35,13 @@ vim.g.maplocalleader = " "
 nnmap("Y", "y$") -- copy current line
 vnmap("Y", '"+y') -- copy to clipboard
 
-nmap("l", "u") -- undo
+ignore_snmap("l", "u") -- undo
 nmap("<LEADER>rc", ":e ~/.config/nvim/init.lua<CR>")
 nmap("<LEADER><CR>", ":nohlsearch<CR>")
 
 -- search
-nmap("-", "N")
-nmap("=", "n")
+ignore_snmap("-", "N")
+ignore_snmap("=", "n")
 
 -- Indent
 nmap("<", "<<")
@@ -47,23 +55,23 @@ nmap(">", ">>")
 --       v
 --
 
-nmap("n", "h")
-nmap("e", "j")
-nmap("u", "k")
-nmap("i", "l")
+ignore_snmap("n", "h")
+ignore_snmap("e", "j")
+ignore_snmap("u", "k")
+ignore_snmap("i", "l")
 
 -- Insert
-nmap("k", "i")
-nmap("K", "I")
+ignore_snmap("k", "i")
+ignore_snmap("K", "I")
 
 -- move quickly
-nmap("U", "5k")
-nmap("E", "5j")
-nmap("W", "5w")
-nmap("B", "5b")
+ignore_snmap("U", "5k")
+ignore_snmap("E", "5j")
+ignore_snmap("W", "5w")
+ignore_snmap("B", "5b")
 
-nmap("N", "0") -- 移动到当前行首
-nmap("I", "$") -- 移动到当前行尾
+ignore_snmap("N", "0") -- 移动到当前行首
+ignore_snmap("I", "$") -- 移动到当前行尾
 
 -- 重载，保存,退出
 nmap("R", ":source ~/.config/nvim/init.lua<CR>")

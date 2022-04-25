@@ -10,6 +10,7 @@ local options = {
     --
     number = true,
     relativenumber = true,
+    cursorline = true,
     --
     wrap = true,
     showcmd = true,

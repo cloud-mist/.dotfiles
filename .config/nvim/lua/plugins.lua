@@ -9,6 +9,8 @@ return require("packer").startup(
             -- Beautify
             --
             use "folke/tokyonight.nvim"
+            use "projekt0n/github-nvim-theme"
+            use "navarasu/onedark.nvim"
             use {
                 "nvim-lualine/lualine.nvim",
                 requires = {"kyazdani42/nvim-web-devicons", opt = true}

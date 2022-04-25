@@ -1,3 +1,6 @@
 return {
-    cmd = {"path/to/zeta-note"}
+    cmd = {"/home/cloudmist/.cargo/bin/zeta-note"},
+    root_dir = function()
+        return vim.fn.getcwd()
+    end
 }

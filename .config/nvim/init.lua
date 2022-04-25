@@ -34,9 +34,9 @@ require("tools.fterm")
 require("tools.gitsign")
 require("tools.neoformat")
 --
-require("beautify.statusline")
-require("beautify.theme")
 require("beautify.dashboard")
+require("beautify.onedark-theme")
+require("beautify.lualine")
 
 --
 vim.g.python3_host_prog = "/usr/bin/python3"
