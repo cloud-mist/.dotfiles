@@ -11,13 +11,17 @@ return require("packer").startup(
             use "folke/tokyonight.nvim"
             use "projekt0n/github-nvim-theme"
             use "navarasu/onedark.nvim"
+
             use {
                 "nvim-lualine/lualine.nvim",
                 requires = {"kyazdani42/nvim-web-devicons", opt = true}
             }
-            use "luochen1990/rainbow"
+            use "lukas-reineke/indent-blankline.nvim"
+
             use "glepnir/dashboard-nvim"
+
             use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
+            use "p00f/nvim-ts-rainbow"
 
             -- ##############
             -- ## Complete ##
@@ -53,13 +57,13 @@ return require("packer").startup(
             use "lervag/vimtex"
             use "fatih/vim-go"
             use "iamcco/markdown-preview.nvim"
-            use "ekalinin/Dockerfile.vim"
-            use "dag/vim-fish"
-            use "wlangstroth/vim-racket"
+            --            use "ekalinin/Dockerfile.vim"
+            --            use "dag/vim-fish"
+            --            use "wlangstroth/vim-racket"
             use "neovimhaskell/haskell-vim"
 
             -- tool
-            --            use "skywind3000/vim-terminal-help"
+            --            use "luochen1990/rainbow"
             use "jiangmiao/auto-pairs"
             use "tpope/vim-surround"
             use "gcmt/wildfire.vim"
@@ -71,6 +75,7 @@ return require("packer").startup(
             }
             use "junegunn/fzf"
             use "junegunn/fzf.vim"
+
             use "numToStr/FTerm.nvim"
             use "sbdchd/neoformat"
 

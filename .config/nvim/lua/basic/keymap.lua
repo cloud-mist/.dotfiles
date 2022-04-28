@@ -21,8 +21,8 @@ local function ignore_snmap(shortcut, command)
     keymap("n", shortcut, command, opts) -- normanl
     keymap("x", shortcut, command, opts) -- visual
     keymap("o", shortcut, command, opts) -- operator-pending
-    keymap("t", shortcut, command, opts) -- termianl
-    keymap("l", shortcut, command, opts) -- insert,command-line,lang-arg
+    --    keymap("t", shortcut, command, opts) -- termianl
+    --    keymap("l", shortcut, command, opts) -- insert,command-line,lang-arg
 end
 
 -- ######################### BASIC ############################

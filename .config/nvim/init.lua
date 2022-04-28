@@ -1,21 +1,21 @@
 --
---	  ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗
---	  ████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║
---	  ██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║
---	  ██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║
---    ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║
---    ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝
+--      ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗
+--      ████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║
+--      ██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║
+--      ██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║
+--      ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║
+--      ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝
 --
 --
---										MY_VIMRC
+--                                              MY_VIMRC
 
 require("plugins")
---
+-- Basic
 require("basic.basic")
 require("basic.keymap")
 require("basic.compileRun")
 require("basic.alg")
---
+-- cmp&lsp
 require("cmp.nvim-cmp")
 require("cmp.luasnip")
 require("lsp.lsp-installer")
@@ -23,24 +23,26 @@ require("lsp.lsp-config")
 require("lsp.fidget")
 require("lsp.lspsaga")
 require("lsp.lsp_signature")
----
+--- lsp.lang
 require("lsp.lang.mdpre")
 require("lsp.lang.vimgo")
 require("lsp.lang.vimtex")
 require("lsp.lang.haskell")
---
---
+-- tool
 require("tools.fterm")
 require("tools.gitsign")
 require("tools.neoformat")
---
+-- beautify
 require("beautify.dashboard")
 require("beautify.onedark-theme")
 require("beautify.lualine")
+require("beautify.treesitter")
+require("beautify.indentline")
 
 --
 vim.g.python3_host_prog = "/usr/bin/python3"
 vim.g.ruby_host_prog = "/usr/bin/ruby"
+vim.g.loaded_perl_provider = 0 -- not load perl
 
 --
 -- viml
@@ -77,8 +79,7 @@ augroup END
 
 
 
-"Rainbow
-let g:rainbow_active = 1
+
 
 " Config File Highlight
 autocmd BufRead,BufNewFile config setf dosini

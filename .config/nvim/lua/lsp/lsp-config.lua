@@ -1,11 +1,15 @@
 local lsp_installer = require("nvim-lsp-installer")
 require("luasnip.loaders.from_vscode").lazy_load()
 local servers = {
-    sumneko_lua = require("lsp.lang.sumneko-lua"),
-    pyright = require("lsp.lang.pyright"),
-    html = require("lsp.lang.html"),
-    zeta_note = require("lsp.lang.markdown"),
-    gopls = require("lsp.lang.gopls")
+    sumneko_lua = require("lsp.lang.sumneko-lua"), -- lua
+    pyright = require("lsp.lang.pyright"), -- python
+    html = require("lsp.lang.html"), -- html
+    prosemd_lsp = require("lsp.lang.markdown"), -- markdown
+    clangd = require("lsp.lang.clangd"), -- c & cpp
+    --    hls = require("lsp.lang.hls"), -- haskell
+    jsonls = require("lsp.lang.json"), -- json
+    texlab = require("lsp.lang.latex"), -- laetx
+    gopls = require("lsp.lang.gopls") -- go
 }
 
 local opts = {noremap = true, silent = true}

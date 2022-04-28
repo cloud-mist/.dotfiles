@@ -1,10 +1,3 @@
--- Eviline config for lualine
--- Author: shadmansaleh
--- Credit: glepnir
-local lualine = require "lualine"
-
--- Color table for highlights
--- stylua: ignore
 local colors = {
     bg = "#202328",
     fg = "#bbc2cf",
@@ -39,10 +32,10 @@ local config = {
         -- Disable sections and component separators
         component_separators = "",
         section_separators = "",
+        --        theme = "onedark",
+        globalstatus = true,
         theme = {
-            -- We are going to use lualine_c an lualine_x as left and
-            -- right section. Both are highlighted by c theme .  So we
-            -- are just setting default looks o statusline
+            -- just setting default looks o statusline
             normal = {c = {fg = colors.fg, bg = colors.bg}},
             inactive = {c = {fg = colors.fg, bg = colors.bg}}
         }
@@ -171,7 +164,7 @@ ins_left {
         end
         return msg
     end,
-    icon = " LSP:",
+    icon = ":",
     color = {fg = "#ffffff", gui = "bold"}
 }
 
@@ -216,5 +209,4 @@ ins_right {
     padding = {left = 1}
 }
 
--- Now don't forget to initialize lualine
-lualine.setup(config)
+require("lualine").setup(config)

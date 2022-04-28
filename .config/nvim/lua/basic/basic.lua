@@ -6,7 +6,7 @@ local options = {
     expandtab = true,
     autoindent = true,
     scrolloff = 8,
-    laststatus = 3, -- Only global statusline
+    --    laststatus = 3, -- Only global statusline
     --
     number = true,
     relativenumber = true,

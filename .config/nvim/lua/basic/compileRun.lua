@@ -56,6 +56,7 @@ func! CompileRunGcc()
 		elseif &filetype == 'go'
 				set splitbelow
 				:sp
+                :res -5
 				:term go run .
 		elseif &filetype == 'scheme'
 				set splitbelow

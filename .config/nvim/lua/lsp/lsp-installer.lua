@@ -10,9 +10,9 @@ lsp_installer.settings(
                 -- Keymap to install a server
                 install_server = "in",
                 -- Keymap to reinstall/update a server
-                update_server = "U",
+                update_server = "up",
                 -- Keymap to update all installed servers
-                update_all_servers = "Ua",
+                update_all_servers = "ua",
                 -- Keymap to uninstall a server
                 uninstall_server = "X"
             }

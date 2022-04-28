@@ -1,4 +1,5 @@
-vim.cmd([[
+vim.cmd(
+    [[
 map <Space>cv :call SetTitle()<CR>
 func SetTitle()
 	if &filetype == 'go'
@@ -33,4 +34,5 @@ func SetTitle()
 		let l = l + 1 | call setline(l,'//}}}')
 	endif
 endfunc
-]])
+]]
+)

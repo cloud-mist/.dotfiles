@@ -13,13 +13,12 @@ require("onedark").setup {
         functions = "italic",
         strings = "none",
         variables = "none"
+    },
+    --
+    highlights = {
+        Number = {fmt = "bold"},
+        TSNumber = {fmt = "bold"}
     }
 }
 
 require("onedark").load()
-
-require("lualine").setup {
-    options = {
-        theme = "onedark"
-    }
-}

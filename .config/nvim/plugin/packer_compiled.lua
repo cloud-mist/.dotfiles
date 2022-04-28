@@ -83,11 +83,6 @@ local no_errors, error_msg =
         time([[try_loadstring definition]], false)
         time([[Defining packer_plugins]], true)
         _G.packer_plugins = {
-            ["Dockerfile.vim"] = {
-                loaded = true,
-                path = "/home/cloudmist/.local/share/nvim/site/pack/packer/start/Dockerfile.vim",
-                url = "https://github.com/ekalinin/Dockerfile.vim"
-            },
             ["FTerm.nvim"] = {
                 loaded = true,
                 path = "/home/cloudmist/.local/share/nvim/site/pack/packer/start/FTerm.nvim",
@@ -158,6 +153,11 @@ local no_errors, error_msg =
                 path = "/home/cloudmist/.local/share/nvim/site/pack/packer/start/fzf.vim",
                 url = "https://github.com/junegunn/fzf.vim"
             },
+            ["github-nvim-theme"] = {
+                loaded = true,
+                path = "/home/cloudmist/.local/share/nvim/site/pack/packer/start/github-nvim-theme",
+                url = "https://github.com/projekt0n/github-nvim-theme"
+            },
             ["gitsigns.nvim"] = {
                 loaded = true,
                 path = "/home/cloudmist/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
@@ -218,10 +218,20 @@ local no_errors, error_msg =
                 path = "/home/cloudmist/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
                 url = "https://github.com/nvim-treesitter/nvim-treesitter"
             },
+            ["nvim-ts-rainbow"] = {
+                loaded = true,
+                path = "/home/cloudmist/.local/share/nvim/site/pack/packer/start/nvim-ts-rainbow",
+                url = "https://github.com/p00f/nvim-ts-rainbow"
+            },
             ["nvim-web-devicons"] = {
                 loaded = true,
                 path = "/home/cloudmist/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
                 url = "https://github.com/kyazdani42/nvim-web-devicons"
+            },
+            ["onedark.nvim"] = {
+                loaded = true,
+                path = "/home/cloudmist/.local/share/nvim/site/pack/packer/start/onedark.nvim",
+                url = "https://github.com/navarasu/onedark.nvim"
             },
             ["packer.nvim"] = {
                 loaded = true,
@@ -233,11 +243,6 @@ local no_errors, error_msg =
                 path = "/home/cloudmist/.local/share/nvim/site/pack/packer/start/plenary.nvim",
                 url = "https://github.com/nvim-lua/plenary.nvim"
             },
-            rainbow = {
-                loaded = true,
-                path = "/home/cloudmist/.local/share/nvim/site/pack/packer/start/rainbow",
-                url = "https://github.com/luochen1990/rainbow"
-            },
             ["rust.vim"] = {
                 loaded = true,
                 path = "/home/cloudmist/.local/share/nvim/site/pack/packer/start/rust.vim",
@@ -248,30 +253,15 @@ local no_errors, error_msg =
                 path = "/home/cloudmist/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
                 url = "https://github.com/folke/tokyonight.nvim"
             },
-            ["vim-fish"] = {
-                loaded = true,
-                path = "/home/cloudmist/.local/share/nvim/site/pack/packer/start/vim-fish",
-                url = "https://github.com/dag/vim-fish"
-            },
             ["vim-go"] = {
                 loaded = true,
                 path = "/home/cloudmist/.local/share/nvim/site/pack/packer/start/vim-go",
                 url = "https://github.com/fatih/vim-go"
             },
-            ["vim-racket"] = {
-                loaded = true,
-                path = "/home/cloudmist/.local/share/nvim/site/pack/packer/start/vim-racket",
-                url = "https://github.com/wlangstroth/vim-racket"
-            },
             ["vim-surround"] = {
                 loaded = true,
                 path = "/home/cloudmist/.local/share/nvim/site/pack/packer/start/vim-surround",
                 url = "https://github.com/tpope/vim-surround"
-            },
-            ["vim-terminal-help"] = {
-                loaded = true,
-                path = "/home/cloudmist/.local/share/nvim/site/pack/packer/start/vim-terminal-help",
-                url = "https://github.com/skywind3000/vim-terminal-help"
             },
             vimtex = {
                 loaded = true,
